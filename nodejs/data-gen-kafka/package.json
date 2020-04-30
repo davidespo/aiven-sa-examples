@@ -1,0 +1,16 @@
+{
+  "name": "data-gen-kafka",
+  "version": "1.0.0",
+  "description": "This repository provides a deployable REST api for the purpose of producing dynamic data to kafka topics for functionality and load testing purposes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "kafkajs": "^1.12.0"
+  }
+}
