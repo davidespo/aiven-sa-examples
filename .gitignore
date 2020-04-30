@@ -1,5 +1,20 @@
-node_modules
+# mac
+.DS_Store
+
+# creds
 ca.pem
 service.cert
 service.key
-.DS_Store
+
+# nodejs
+node_modules
+
+# java
+client.keystore.p12
+client.truststore.jks
+target
+.settings
+.project
+.classpath
+.mvn
+bin
