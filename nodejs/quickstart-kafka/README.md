@@ -1,5 +1,5 @@
 Time: 30 minutes \
-Estimated Cost: ~\$1
+Estimated Cost: ~\$5 (make sure to use \$300 free credits for new accounts)
 
 # Setup
 
