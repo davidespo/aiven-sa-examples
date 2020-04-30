@@ -8,7 +8,7 @@ Estimated Cost: ~\$5 (make sure to use \$300 free credits for new accounts)
    - Access Key => `nodejs/quickstart-kafka/service.key`
    - Access Certificate: `nodejs/quickstart-kafka/service.cert`
    - CA Certificate: `nodejs/quickstart-kafka/ca.pem`
-1. ... wait for the kafka cluster to start up ![Healthy Cluster](./healthy_cluster.png)
+1. ... wait for the kafka cluster to start up ![Healthy Cluster](../../assets/healthy_cluster.png)
 1. ![rapu][rapu] Create `nodejs-quickstart-kafka-topic` under the "Topics" tab on the Kafka service using the default configurations.
 1. ![rapu][rapu] From the "Overview" tab copy the `Service URI` value.
 1. ![terminal][terminal] Run the example.
