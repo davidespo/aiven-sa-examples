@@ -1,4 +1,4 @@
-Time: 30 minutes
+Time: 30 minutes \
 Estimated Cost: ~\$1
 
 # Setup
