@@ -16,6 +16,8 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
 	
@@ -23,6 +25,9 @@ public class Main {
 	private final static String ServiceURI = "kafka-e271828-david-demo.aivencloud.com:24590";
 	
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
+		Logger logger = LoggerFactory.getLogger(Main.class);
+		logger.info("This is how you configure Java Logging with SLF4J");
+
 		System.out.println("\nConnecting to cluster@" + ServiceURI + "\n");
 		String key = UUID.randomUUID().toString();
 		CompletableFuture<Void> consumerFuture = runConsumerExample(key);

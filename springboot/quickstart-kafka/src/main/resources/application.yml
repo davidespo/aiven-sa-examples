@@ -1,0 +1,25 @@
+# Demo Configs
+demo.serviceURI: kafka-e271828-david-demo.aivencloud.com:24590
+demo.topic: java-quickstart-kafka-topic
+
+# Kafka
+spring.kafka:
+  properties:
+    ssl.endpoint.identification.algorithm: ""
+    ssl.truststore.location: client.truststore.jks
+    ssl.truststore.password: secret
+    ssl.keystore.type: PKCS12
+    ssl.keystore.location: client.keystore.p12
+    ssl.keystore.password: secret
+    ssl.key.password: secret
+    security.protocol: SSL
+  consumer:
+    bootstrap-servers: ${demo.serviceURI}
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    group-id: java-quickstart-kafka-cgroup
+    auto-offset-reset: latest
+  producer:
+    bootstrap-servers: ${demo.serviceURI}
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

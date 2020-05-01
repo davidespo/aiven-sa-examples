@@ -17,4 +17,6 @@ target
 .project
 .classpath
 .mvn
+*.iml
+.idea
 bin
