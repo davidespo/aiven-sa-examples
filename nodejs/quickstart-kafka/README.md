@@ -8,7 +8,8 @@ Estimated Cost: ~\$5 (make sure to use \$300 free credits for new accounts)
    - Access Key => `nodejs/quickstart-kafka/service.key`
    - Access Certificate: `nodejs/quickstart-kafka/service.cert`
    - CA Certificate: `nodejs/quickstart-kafka/ca.pem`
-1. ... wait for the kafka cluster to start up ![Healthy Cluster](../../assets/healthy_cluster.png)
+1. ... wait for the kafka cluster to start up \
+   ![Healthy Cluster](../../assets/healthy_cluster.png)
 1. ![rapu][rapu] Create `nodejs-quickstart-kafka-topic` under the "Topics" tab on the Kafka service using the default configurations.
 1. ![rapu][rapu] From the "Overview" tab copy the `Service URI` value.
 1. ![terminal][terminal] Run the example.
@@ -20,8 +21,9 @@ Estimated Cost: ~\$5 (make sure to use \$300 free credits for new accounts)
 Run the following command replacing the service URI with your value from above
 
 ```sh
-ServiceURI=<<my-service-uri>> node main.js
+# The following syntax sets a runtime environment variable for the `node` process
 # e.g. ServiceURI=david-kafka-474c5c6-david-demo.aivencloud.com:24590 node main.js
+ServiceURI=<<my-service-uri>> node main.js
 ```
 
 Example Output

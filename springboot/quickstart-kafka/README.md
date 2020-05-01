@@ -17,10 +17,12 @@ stream processing. Everything Spring needs to process a Kafka stream can be foun
    - Access Certificate: `springboot/quickstart-kafka/service.cert`
    - CA Certificate: `springboot/quickstart-kafka/ca.pem`
 1. ![terminal][terminal] Create the Keystore and Truststore following steps below.
-1. ![rapu][rapu] ... wait for the kafka cluster to start up ![Healthy Cluster](../../assets/healthy_cluster.png)
+1. ![rapu][rapu] ... wait for the kafka cluster to start up \
+   ![Healthy Cluster](../../assets/healthy_cluster.png)
 1. ![rapu][rapu] Create `java-quickstart-kafka-topic` under the "Topics" tab on the Kafka service using the default configurations.
 1. ![rapu][rapu] From the "Overview" tab copy the `Service URI` value.
-1. Update `springboot/quickstart-kafka/src/main/resources/application.yml` to use your Service URI. Change the config on line 2. ![Service URI](./sb_service_uri.png)
+1. Update `springboot/quickstart-kafka/src/main/resources/application.yml` to use your Service URI. Change the config on line 2. \
+   ![Service URI](./sb_service_uri.png)
 1. ![terminal][terminal] Run the example.
 1. ![rapu][rapu] From the "Topics" tab, click "Show Info" for your topic. You should see the offset for the topic partitions and consumer group as well as consumer group lag. Note that it might take a couple minutes for the consumer group to show up.
 1. ![rapu][rapu] Clean up your Kafka service in the Aiven console to prevent further billing. You can "Delete" your service or just "Power Off" if you want to come back later.
@@ -31,13 +33,13 @@ Check out Aiven's official help documentation for [Getting Started with Aiven Ka
 
 ```sh
 # setup your secret values
-# relies on `service.key` and `service.cert` in the root directory, specifically `java/quickstart-kafka/*`
+# relies on `service.key` and `service.cert` in the root directory, specifically `springboot/quickstart-kafka/*`
 openssl pkcs12 -export -inkey service.key -in service.cert -out client.keystore.p12 -name service_key
 # > Enter Export Password: secret
 # > Verifying - Enter Export Password: secret
 
 # setup Aiven's trusted certificate
-# relies on `ca.pem` in the root directory, specifically `java/quickstart-kafka/*`
+# relies on `ca.pem` in the root directory, specifically `springboot/quickstart-kafka/*`
 keytool -import -file ca.pem -alias CA -keystore client.truststore.jks
 # > Enter keystore password: secret
 # > Re-enter new password: secret
